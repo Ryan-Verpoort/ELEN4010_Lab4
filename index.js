@@ -6,6 +6,8 @@ let bodyParser = require('body-parser');
 let mainRouter = require("./mainRoutes.js");
 let todoRouter = require("./todoRoutes.js");
 
+app.use('cdn',express.static('public'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -1,18 +1,13 @@
-//Private
-var list = [];
+"use strict";
 
-//Public
-module.exports = {
-    add: function(todo) {
-        list.push(todo)
-    },
-    edit: function(todo, index){
-        list[index] = todo;
-    },
-    get: function(index) {
-        return list[index];
-    },
-    delete: function(index) {
-        list.splice(index, 1); //remove one element starting from index
-    }
-}
+let chai = require("chai")
+chai.should();
+
+describe("Hello", function() {
+    describe("World", function(){
+        it("hello should greet the world", function(){
+            let hello = "world";
+            hello.should.equal("world");
+        });
+    });
+});
