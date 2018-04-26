@@ -1,13 +1,19 @@
-"use strict";
+//Private
+var list = [];
 
-let chai = require("chai")
-chai.should();
+//Public
 
-describe("Hello", function() {
-    describe("World", function(){
-        it("hello should greet the world", function(){
-            let hello = "world";
-            hello.should.equal("world");
-        });
-    });
-});
+module.exports = {
+    add: function(todo) {
+        list.push(todo)
+    },
+    edit: function(todo, index){
+        list[index] = todo;
+    },
+    get: function (index) {
+        return list[index];
+    },
+    delete: function(index) {
+        list.splice(index, 1); //remove one element starting from index
+    }
+}
